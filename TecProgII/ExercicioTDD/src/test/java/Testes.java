@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
+import Controller.Controller;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,25 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Alunos
  */
-public class ExercicioTeste {
+public class Testes {
     
-    public ExercicioTeste() {
-    }
+    @Test
+    public void testando() {
+    Controller controle = new Controller();
     
-    @BeforeAll
-    public static void setUpClass() {
-    }
+    controle.regisUser("Victor", "123");
+        assertTrue(controle.validaLogin("Victor", "123"));
+}
     
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
-    }
-
 }

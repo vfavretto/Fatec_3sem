@@ -1,5 +1,13 @@
 package Model;
 public class User {
+    
+    private String user;
+    private String senha;
+
+    public User(String user, String senha) {
+        this.user = user;
+        this.senha = senha;
+    }
 
     public String getUser() {
         return user;
@@ -16,6 +24,5 @@ public class User {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    private String user = "adm";
-    private String senha = "123";
+    
 }
