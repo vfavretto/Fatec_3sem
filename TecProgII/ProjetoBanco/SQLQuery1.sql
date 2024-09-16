@@ -1,0 +1,126 @@
+-- Tabela de Históricos
+
+CREATE TABLE Historicos (
+
+    ID_HIS INT PRIMARY KEY,
+
+    DES_HIS VARCHAR(30)
+
+);
+ 
+-- Tabela de Agências
+
+CREATE TABLE Agencias (
+
+    NUM_AGE INT PRIMARY KEY,
+
+    NOME_AGE VARCHAR(30),
+
+    ENDE_AGE VARCHAR(50),
+
+    NUM_AGE_END INT,
+
+    COMPL_AGE VARCHAR(20),
+
+    BAIR_AGE VARCHAR(20),
+
+    CIDA_AGE VARCHAR(30),
+
+    UF_AGE CHAR(2),
+
+    CEP_AGE CHAR(8),
+
+    FONE_AGE VARCHAR(13)
+
+);
+ 
+-- Tabela de Clientes
+
+CREATE TABLE Clientes (
+
+    ID_CLI INT PRIMARY KEY,
+
+    NOME_CLI VARCHAR(50),
+
+    ENDE_CLI VARCHAR(50),
+
+    NUM_CLI INT,
+
+    COMPL_CLI VARCHAR(20),
+
+    BAIR_CLI VARCHAR(20),
+
+    CIDA_CLI VARCHAR(30),
+
+    UF_CLI CHAR(2),
+
+    CEP_CLI CHAR(8),
+
+    FONE_CLI VARCHAR(13),
+
+    CPF_CLI CHAR(11),
+
+    DATA_NASC DATE,
+
+    CNPJ_CLI CHAR(14)
+
+);
+ 
+-- Tabela de Conta Corrente
+
+CREATE TABLE ContaCorrente (
+
+    NUM_AGE INT,
+
+    NUM_CC INT PRIMARY KEY,
+
+    ID_CLI INT,
+
+    SALDO DECIMAL(15,2),
+
+    FOREIGN KEY (NUM_AGE) REFERENCES Agencias(NUM_AGE),
+
+    FOREIGN KEY (ID_CLI) REFERENCES Clientes(ID_CLI),
+
+
+);
+
+CREATE TABLE Usuarios (
+
+    ID_USER INT PRIMARY KEY,
+
+    SENHA VARCHAR(20),
+
+    NUM_CC INT,
+
+    ID_CLI INT,
+
+    FOREIGN KEY (NUM_CC) REFERENCES ContaCorrente(NUM_CC),
+
+    FOREIGN KEY (ID_CLI) REFERENCES Clientes(ID_CLI)
+
+);
+
+CREATE TABLE MOVIMENTACAO (
+
+	NUM_AGE NUMERIC(5, 0),
+
+	NUM_CC NUMERIC (10, 0),
+
+	DATA_MOV DATETIME,
+
+	NUM_DOCTO VARCHAR (6) PRIMARY KEY,
+
+	DEBITO_CREDITO CHAR(1),
+
+	ID_HIS NUMERIC (4, 0),
+
+	COMPL_HIS VARCHAR (30),
+
+	VALOR NUMERIC (9, 2),
+
+	SALDO NUMERIC (15, 2),
+
+
+
+);
