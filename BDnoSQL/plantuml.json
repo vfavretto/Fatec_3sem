@@ -1,3 +1,4 @@
+@startjson
 
 {
   "idEmpresa": 1,
@@ -42,4 +43,6 @@
     }
   ]
 }
+
+@endjson
 
