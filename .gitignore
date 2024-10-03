@@ -130,3 +130,4 @@ dist
 .pnp.*
 /TecProgII/ExercicioTDD/target/
 /TecProgII/ExercicioTDD/nbproject/
+/TecProgII/ProjetoBanco/DAO/nbproject/private/
