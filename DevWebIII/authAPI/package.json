@@ -1,19 +1,16 @@
 {
-  "name": "mvcmongodb",
+  "name": "authapi",
   "version": "1.0.0",
-  "description": "Ex mongodb with node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "vFavretto",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "body-parser": "^1.20.3",
     "express": "^4.21.0",
-    "mongoose": "^8.6.3"
-  },
-  "devDependencies": {
+    "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.7"
   }
 }

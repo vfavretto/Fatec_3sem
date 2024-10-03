@@ -5,7 +5,7 @@ const userRoute = require('./src/routes/userRoute')
 
 //acesso ao mongoose (BD)
 const mongoose = require('mongoose')
-let url = 'mongodb://localhost:27017/Fatec'
+let url = 'mongodb://localhost:27017/DevWebIII'
 let mongoDB = process.env.MONGODB_URI || url
 mongoose.connect(mongoDB)
 mongoose.Promise = global.Promise
