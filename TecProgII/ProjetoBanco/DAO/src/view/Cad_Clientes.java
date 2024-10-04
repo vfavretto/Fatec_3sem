@@ -264,6 +264,9 @@ public class Cad_Clientes extends javax.swing.JFrame {
         dados_cliente.setCpfCli(jTextField11.getText());
         dados_cliente.setDataNasc(jTextField12.getText());
         dados_cliente.setCnpjCli(jTextField13.getText());
+        
+        connectDAO objcon = new connectDAO();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
