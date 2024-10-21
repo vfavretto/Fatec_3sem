@@ -37,6 +37,25 @@ public class Cliente {
     public Cliente (){
         
     }
+    
+    public String dadosSQLInsert(){
+        String dadosClientes;
+        dadosClientes = "'"
+            + this.getIdCli() + "','"
+            + this.getNomeCli() + "','"
+            + this.getEndeCli() + "','"
+            + this.getNumeCli() + "','"
+            + this.getComplCli() + "','"
+            + this.getBairCli() + "','"
+            + this.getCidaCli() + "','"
+            + this.getUfCli() + "','"
+            + this.getCepCli() + "','"
+            + this.getFoneCli() + "','"
+            + this.getCpfCli()+ "','"
+            + this.getDataNasc()+ "','"
+            + this.getCnpjCli()+ "'";
+    return dadosClientes;
+    }
 
     // Getters e Setters
     public long getIdCli() {
