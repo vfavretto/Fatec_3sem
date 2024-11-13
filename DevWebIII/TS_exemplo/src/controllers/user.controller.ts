@@ -1,9 +1,15 @@
 import { Request, Response} from 'express'
 import { IUser } from './user.interface';
 
-export const getUser = (_request: Request , response: Response) => {
+export const getUser = (request: Request , response: Response) => {
+
+    //obtenha o id de dentro da request via console.log
+    //console.log(request.params.id);
+
+    const {id} = request.params
+
     const user: IUser ={
-        id: 1,
+        id: Number(id),
         name: 'João Jorge',
         age: 18
     };
