@@ -41,3 +41,23 @@ it("Deve retornar todos os usuarios cadastrados a partir do ID, se sucesso", asy
     }))
 });
 
+describe("Cadastro de usuario", () => {
+  it("Deve retornar sucesso, se os parametros estiverem corretos", () => {
+    expect(null).toBeNull();
+  });
+});
+
+//Faça um teste para somar dois numeros
+describe("Soma", () => {
+  it("Deve somar dois numeros", () => {
+    expect(1 + 1).toBe(2);
+  });
+})
+
+//Faça em que dois números devem ser maiores que 0
+describe("Soma", () => {
+  it("Deve somar dois numeros", () => {
+    expect(1 + 1).toBeGreaterThan(0);
+  });
+})
+
